@@ -31,14 +31,14 @@ const users =[
   export default function Menu(){
     return(
       <div className="flex justify-center mt-14">
-        <ul className="w-[90%] grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <ul className="w-[90%] grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 ">
           {
             users.map((user,i)=>{
               return(
-                <li key={i} className="rounded-md shadow-2xl border p-5 m-3">
-                  <Image src={user.image} alt={user.title} width={400} height={400} className="rounded-2xl w-full h-[200px]" />
-                  <h1 className="font-bold">{user.title} <br /><br /></h1>
-                  <p className="">{user.description} </p>
+                <li key={i} className="rounded-md shadow-2xl border p-5 m-3 justify-center">
+                  <Image src={user.image} alt={user.title} width={400} height={400} className="rounded-2xl w-[220px] h-[200px] mx-auto" />
+                  <h1 className="font-bold text-center">{user.title} <br /><br /></h1>
+                  <p className=" text-center">{user.description} </p>
                   <Link href={user.url} className="text-blue-500">Click Here</Link>
                 </li>
               )
@@ -48,3 +48,4 @@ const users =[
       </div>
     )
   }
+  
